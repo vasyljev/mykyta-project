@@ -216,7 +216,7 @@ h5 {
 }
 
 .service {
-    display: flex;
+    display: none;
     
     position: relative;
     right: -1000px;
@@ -950,7 +950,8 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 @media only screen and (max-width: 1180px) {
     header {
-        height: 600px;
+        height: 100vh;
+
      }
      header>.container {
         padding-bottom: 30px;
@@ -1215,10 +1216,12 @@ input:focus::placeholder, textarea:focus::placeholder {
     }
 }
 
-@media only screen and (max-width: 381px) {
+@media only screen and (max-width: 381px) {  
     header {
-        height: 100%;
-     }
+        .container {
+            align-content: normal;
+        }
+    } 
      .container {        
         padding: 15px 10px;
      }
@@ -1262,6 +1265,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
      .midle-header {
          margin: 15px 0;
+        
      }
     header h1 {
         font-size: 30px;
@@ -1278,11 +1282,10 @@ input:focus::placeholder, textarea:focus::placeholder {
     .header-button {
         font-size: 14px;
     }
-    .circle-arrow-down {
-        display: none;
-    }
+    
     #menu{
         justify-content: flex-end;
+        align-items: flex-start;
     }
 
     #menu p {
