@@ -353,6 +353,7 @@ h5 {
 }
 
 .portfolio {
+    opacity: 0;
     width: 100%; height: auto;
     display: flex;
     flex-wrap: wrap;    
@@ -680,6 +681,16 @@ label {
 
 .our-team  p {
     line-height: 30px;
+}
+
+.left-anim-ti {
+    position: relative;
+    left: -1000px;
+}
+
+.right-anim-ti {
+    position: relative;
+    right: -1000px;
 }
 
 .team-block {
