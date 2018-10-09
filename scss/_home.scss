@@ -188,10 +188,11 @@ h5 {
     height: 50px;
     position: fixed;
     right: 10px;
-    bottom: 20px;
+    bottom: 40px;
     z-index: 1000;
     background-color: #3b434c;
     border-radius: 50%;
+    box-shadow: 0 0 10px rgba(122, 201, 255, .4);
     &::after {
         content: '';
         position: absolute;
