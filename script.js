@@ -6,19 +6,18 @@ $('.scroll_to').click(function(e){
     });
 
 $(document).ready(function(){
-
+var thirdAnimHeight;
+if ($(this).width() > 730) {
+	thirdAnimHeight = 2800;
+} else {
+	thirdAnimHeight = 3800;
+}
 	$(window).scroll(function() {
 		if($(this).scrollTop() != 0) {
 			$('#arrow-to-top-link').fadeIn();
 		} else {
 			$('#arrow-to-top-link').fadeOut();
 		}
-	});
-
-	$('#arrow-to-top-link').click(function() {
-		$('body, html').animate({scrollTop:0},800);
-	});
-	$(window).scroll(function() {
 		if ($(this).scrollTop() > 100) {
 			$('.service').fadeIn().animate({right: 0, opacity: 1},600);
 		}
@@ -26,12 +25,16 @@ $(document).ready(function(){
 			$('.portfolio').fadeIn().animate({opacity: 1},800);
 			
 		}
-		if ($(this).scrollTop() > 2800) {
+		if ($(this).scrollTop() > thirdAnimHeight) {
 			$('.left-anim-ti').fadeIn().animate({left: 0},800);
 			$('.right-anim-ti').fadeIn().animate({right: 0},800);
 			
 		}
-	}); 	
+	});
+
+	$('#arrow-to-top-link').click(function() {
+		$('body, html').animate({scrollTop:0},800);
+	});
 	
 });
 
