@@ -6,10 +6,21 @@ $('.scroll_to').click(function(e){
     });
 
 $(document).ready(function(){
-var thirdAnimHeight;
-if ($(this).width() > 730) {
+	var firstAnimHeight;
+	var secondAnimHeight;
+	var thirdAnimHeight;
+
+if ($(this).width() > 940) {
+	firstAnimHeight = 100;
+	secondAnimHeight = 1100;
 	thirdAnimHeight = 2800;
-} else {
+} if (($(this).width() < 940)&&($(this).width() > 720)) {
+	firstAnimHeight = 150;
+	secondAnimHeight = 1000;
+	thirdAnimHeight = 2700;
+} else if ($(this).width() < 720)  {
+	firstAnimHeight = 300;
+	secondAnimHeight = 1500;
 	thirdAnimHeight = 3800;
 }
 	$(window).scroll(function() {
@@ -18,16 +29,16 @@ if ($(this).width() > 730) {
 		} else {
 			$('#arrow-to-top-link').fadeOut();
 		}
-		if ($(this).scrollTop() > 100) {
+		if ($(this).scrollTop() > firstAnimHeight) {
 			$('.service').fadeIn().animate({right: 0, opacity: 1},600);
 		}
-		if ($(this).scrollTop() > 1000) {
+		if ($(this).scrollTop() > secondAnimHeight) {
 			$('.portfolio').fadeIn().animate({opacity: 1},800);
 			
 		}
 		if ($(this).scrollTop() > thirdAnimHeight) {
-			$('.left-anim-ti').fadeIn().animate({left: 0},800);
-			$('.right-anim-ti').fadeIn().animate({right: 0},800);
+			$('.left-anim-ti').fadeIn().animate({left: 0},600);
+			$('.right-anim-ti').fadeIn().animate({right: 0},600);
 			
 		}
 	});
